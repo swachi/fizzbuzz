@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blank</title>
+    <title>CSCIE32_asgn0_fizzbuzz</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,6 +27,27 @@
 
     <h1>Hello World!</h1>
     <p class="lead">This is something!</p>
+    <div class="panel panel-default" ng-controller="MyFizzBuzzController">
+        <div class="panel-heading">
+            Assignment 0: FizzBuzz
+        <div class="panel-body">
+            <div class="input-group">
+                <label> N: </label>
+                <input type="number" ng-model="fizzBuzzNum" ng-init="fizzBuzzNum=15">
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    fizzBuzz({{fizzBuzzNum}}) output:
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="obj in fizzBuzzAns track by $index">
+                        {{obj}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 </div><!-- /.container -->
 
@@ -36,5 +57,8 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="js/assign0_fizzbuzz.js"></script>
 </body>
 </html>
